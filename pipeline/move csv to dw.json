@@ -26,11 +26,57 @@
 							"type": "DelimitedTextReadSettings"
 						}
 					},
-					"enableStaging": false
+					"sink": {
+						"type": "SqlPoolSink",
+						"writeBehavior": "Insert",
+						"sqlWriterUseTableLock": false
+					},
+					"enableStaging": false,
+					"translator": {
+						"type": "TabularTranslator",
+						"mappings": [
+							{
+								"source": {
+									"name": "CustomerID",
+									"type": "String"
+								},
+								"sink": {
+									"name": "customerid",
+									"type": "Int32"
+								}
+							},
+							{
+								"source": {
+									"name": "CustomerName",
+									"type": "String"
+								},
+								"sink": {
+									"name": "customername",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "CreditLimit",
+									"type": "String"
+								},
+								"sink": {
+									"name": "creditlimit",
+									"type": "Int32"
+								}
+							}
+						]
+					}
 				},
 				"inputs": [
 					{
 						"referenceName": "DelimitedText1",
+						"type": "DatasetReference"
+					}
+				],
+				"outputs": [
+					{
+						"referenceName": "SqlPoolTable1",
 						"type": "DatasetReference"
 					}
 				]

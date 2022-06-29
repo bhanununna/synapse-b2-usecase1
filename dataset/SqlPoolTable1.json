@@ -1,0 +1,31 @@
+{
+	"name": "SqlPoolTable1",
+	"properties": {
+		"annotations": [],
+		"type": "SqlPoolTable",
+		"schema": [
+			{
+				"name": "customerid",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "customername",
+				"type": "nvarchar"
+			},
+			{
+				"name": "creditlimit",
+				"type": "int",
+				"precision": 10
+			}
+		],
+		"typeProperties": {
+			"schema": "dbo",
+			"table": "customerrecords"
+		},
+		"sqlPool": {
+			"referenceName": "SQLPool001",
+			"type": "SqlPoolReference"
+		}
+	}
+}

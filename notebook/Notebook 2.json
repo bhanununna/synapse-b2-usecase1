@@ -17,7 +17,7 @@
 				"spark.dynamicAllocation.enabled": "false",
 				"spark.dynamicAllocation.minExecutors": "2",
 				"spark.dynamicAllocation.maxExecutors": "2",
-				"spark.autotune.trackingId": "69fc7b08-1e3b-433e-beae-0648a9810cfb"
+				"spark.autotune.trackingId": "79a3f2c2-fbb4-493c-a191-e8e8b59c1554"
 			}
 		},
 		"metadata": {
@@ -60,7 +60,7 @@
 					"df = spark.read.load('abfss://trainingsynapsefs10@trainingsynapsedls10.dfs.core.windows.net/data/NYCTripSmall.parquet', format='parquet')\r\n",
 					"df.write.mode(\"overwrite\").saveAsTable(\"default.smalltripsspark\")"
 				],
-				"execution_count": 1
+				"execution_count": 2
 			}
 		]
 	}

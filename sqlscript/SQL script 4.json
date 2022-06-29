@@ -1,0 +1,17 @@
+{
+	"name": "SQL script 4",
+	"properties": {
+		"content": {
+			"query": "create TABLE customerrecords (\n    customerid int, \n    customername NATIONAL CHARACTER VARYING(100),\n    creditlimit int\n); \nGO",
+			"metadata": {
+				"language": "sql"
+			},
+			"currentConnection": {
+				"databaseName": "SQLPool001",
+				"poolName": "SQLPool001"
+			},
+			"resultLimit": 5000
+		},
+		"type": "SqlQuery"
+	}
+}
